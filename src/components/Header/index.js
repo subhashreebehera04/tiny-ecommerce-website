@@ -22,11 +22,11 @@ const Header =() =>{
                             <div className='col-sm-10 d-flex align-items-center part2'>
                                 <SearchBox/>
                                 <div className='part3  d-flex align-items-center'>
-                                    <button className='usericon mr-3'><FaUserCircle /></button>
+                                    <button className='usericon mr-3'><FaUserCircle/></button>
                                     <div className='ml-auto cartTab d-flex align-items-center'>
                                         <span className='price'>₹45.00</span>
                                         <div className='position-relative ml-2'>
-                                            <button className='usericon'><BsCart4 /></button>
+                                            <button className='usericon'><BsCart4/></button>
                                             <span className='count d-flex align-items-center justify-content-center'>1</span>
                                         </div>
                                         
@@ -39,6 +39,7 @@ const Header =() =>{
                     </div>
 
                 </header>
+               
                 <NavigationBar/>
 
             </div>

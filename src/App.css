@@ -1,5 +1,7 @@
 *{margin: 0px; padding: 0px;}
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 body{font-family: "Bitter", serif;}
 .bg-top{
     background: #450920;
@@ -37,13 +39,6 @@ header .part3 .usericon svg:hover{
     position: absolute; top: -3px; right: -4px; background: #DA627D; border-radius: 50%;
     color: #fff; width: 18px; height: 18px; font-size: small;
 }
-nav .categories button{
-    background: #ffffff;
-    padding: 8px 30px;
-    border: 1px solid #e7e7e7;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
 nav {
   padding-bottom: 0;
   margin-bottom: 0;
@@ -56,7 +51,17 @@ nav .categories {
 nav hr {
   margin-top: 0;
 }
-nav .categories button::after {
+nav .main-btn {
+  background: #ffffff;
+  padding: 8px 30px;
+  border: 1px solid #e7e7e7;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  display: inline-block; /* <-- Add this line */
+  position: relative; /* required for ::after underline */
+}
+
+nav .main-btn::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -66,11 +71,73 @@ nav .categories button::after {
   background-color: #450920;
   transition: all 0.3s ease;
   transform: translateX(-50%);
+  display: inline-block; 
 }
 
-nav .categories button:hover::after {
+nav .main-btn:hover::after {
   width: 100%;
 }
 nav li{
     list-style: none;
+    display: inline-block;
+}
+nav ul li{
+  position: relative;
+}
+nav .dropdown-wrapper {
+  position: relative;
+}
+nav .dropdown_menu{
+  position: absolute; top: 50px; left: 0px; width: 250px; height: auto; background: #fff;
+  box-shadow: 5px 5px 15px rgba(186, 186, 186, 0.5); border-radius: 5px; padding: 10px 0px; z-index: 100;
+}
+
+nav .dropdown_menu li{
+  width: 100%;
+  margin: 5px 0;
+}
+nav .dropdown_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+nav .dropdown_menu li button{
+  width: 100%; text-align: left !important; justify-content: flex-start;
+}
+nav .dropdown_menu li button:hover{
+  background: #fff7ee;
+}
+nav .dropdown_menu li button a{
+  width: 100%;
+  color: #000;
+}
+nav .dropdown_menu li button a:hover {
+  color: #DA627D; text-decoration: none;
+}
+.homeBannerSection *{
+  outline: none;
+}
+.homeBannerSection{
+  position: relative;
+  overflow: hidden;
+}
+.homeProducts .info h3{
+  padding-top: 24px;
+}
+.productItem{
+  width: 100%; height: auto; border: 1px solid rgba(0,0,0,0.1);
+}
+
+.close_{
+  position: absolute; top: 10px; right: 10px; color: #000; min-width: 40px !important;
+  width: 40px !important; height: 40px !important; border-radius: 50% !important;
+}
+.close_ svg{
+  font-size: 22px;
+}
+
+.productModal .MuiPaper-elevation{
+  padding: 25px;
+  position: relative;
 }
